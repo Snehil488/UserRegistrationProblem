@@ -15,6 +15,10 @@ namespace UserRegistrationProblem
             string lastName = Console.ReadLine();
             bool lNameResult = validate.ValidateLastName(lastName);
             validate.PrintResult(lNameResult);
+            Console.WriteLine("Enter Email Id : ");
+            string email = Console.ReadLine();
+            bool emailResult = validate.ValidateEmail(email);
+            validate.PrintResult(emailResult);
         }
     }
 }
