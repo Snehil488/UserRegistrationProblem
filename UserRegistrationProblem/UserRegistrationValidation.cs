@@ -10,17 +10,22 @@ namespace UserRegistrationProblem
         private static string REGEX_FIRSTNAME = "^[A-Z][a-z]{2,}$";
         private static string REGEX_LASTNAME = "^[A-Z][a-z]{2,}$";
         private static string REGEX_EMAIL = "^[a-zA-Z0-9]+([.][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$";
+        private static string REGEX_MOBILENUMBER = "^[1-9]{1,3}[ ][1-9][0-9]{9}$";
         public bool ValidateFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
-        }    
+        }
         public bool ValidateLastName(string lastName)
         {
             return Regex.IsMatch(lastName, REGEX_LASTNAME);
-        }        
+        }
         public bool ValidateEmail(string email)
         {
             return Regex.IsMatch(email, REGEX_EMAIL);
+        }
+        public bool ValidateMobileNumber(string mobNumber)
+        {
+            return Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER);
         }
         public void PrintResult(bool result)
         {
