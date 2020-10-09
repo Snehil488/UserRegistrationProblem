@@ -11,7 +11,7 @@ namespace UserRegistrationProblem
         private static string REGEX_LASTNAME = "^[A-Z][a-z]{2,}$";
         private static string REGEX_EMAIL = "^[a-zA-Z0-9]+([.][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$";
         private static string REGEX_MOBILENUMBER = "^[1-9]{1,3}[ ][1-9][0-9]{9}$";
-        private static string REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9-+_!@#$%^&*.,?]{8,}$";
+        private static string REGEX_PASSWORD = "^(?=.*[0-9])(?=.*[A-Z])(?=[^!@#$%&*+-.]*[!@#$%&*+-.][^!@#$%&*+-.]*$)[\\S]{8,}$";
         public bool ValidateFirstName(string firstName)
         {
             return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
