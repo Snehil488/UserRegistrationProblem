@@ -11,7 +11,6 @@ namespace UserRegistrationProblem
         {
             "abc@yahoo.com",
             "abc-100@yahoo.com",
-            "abc-100@yahoo.com",
             "abc.100@yahoo.com",
             "abc111@abc.com",
             "abc-100@abc.net",
