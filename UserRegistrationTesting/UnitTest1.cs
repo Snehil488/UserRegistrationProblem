@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using UserRegistrationProblem;
 
-namespace UserRegistrationProblemTest
+namespace UserRegistrationTestings
 {
     [TestClass]
     public class UnitTest1

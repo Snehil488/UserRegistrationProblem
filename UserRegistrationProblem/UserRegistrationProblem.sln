@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserRegistrationProblem", "UserRegistrationProblem.csproj", "{1E3098F8-2EA8-484A-A968-941B92AE5A90}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserRegistrationProblemTest", "..\UserRegistrationTesting\UserRegistrationProblemTest.csproj", "{993FF441-7BB4-4DB8-9D37-17EE0F03B0F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserRegistrationTesting", "..\UserRegistrationTesting\UserRegistrationTesting.csproj", "{993FF441-7BB4-4DB8-9D37-17EE0F03B0F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
