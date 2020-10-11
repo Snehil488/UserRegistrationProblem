@@ -65,59 +65,89 @@ namespace UserRegistrationTestings
         }
         //Sad Test Cases(Test Cases Fail The Entry)
         [TestMethod]
-        public void GivenUserFistName_WhenValidate_ShouldReturnFalse()
+        public void GivenUserFistName_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_FirstName()
         {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string firstName = "snehil";
-            //Act
-            bool result = user.ValidateFirstName(firstName);
-            //Assert
-            Assert.IsFalse(result);
+            try
+            {
+                //Arrange
+                UserRegistrationValidation user = new UserRegistrationValidation();
+                string firstName = "snehil";
+                //Act
+                bool result = user.ValidateFirstName(firstName);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid first name.", e.Message);
+            }
         }
         [TestMethod]
-        public void GivenUserLastName_WhenValidate_ShouldReturnFalse()
+        public void GivenUserLastName_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_LastName()
         {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string lastName = "verma";
-            //Act
-            bool result = user.ValidateFirstName(lastName);
-            //Assert
-            Assert.IsFalse(result);
+            try
+            {
+                //Arrange
+                UserRegistrationValidation user = new UserRegistrationValidation();
+                string lastName = "verma";
+                //Act
+                bool result = user.ValidateLastName(lastName);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid last name.", e.Message);
+            }
         }
         [TestMethod]
-        public void GivenEmailId_WhenValidate_ShouldReturnFalse()
+        public void GivenEmail_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_Email()
         {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string email = "SnehilSinghgmail.com";
-            //Act
-            bool result = user.ValidateEmail(email);
-            //Assert
-            Assert.IsFalse(result);
+            try
+            {
+                //Arrange
+                UserRegistrationValidation user = new UserRegistrationValidation();
+                string email = "SnehilSinghgmail.com";
+                //Act
+                bool result = user.ValidateEmail(email);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid email id.", e.Message);
+            }
         }
         [TestMethod]
-        public void GivenMobileNumber_WhenValidate_ShouldReturnFalse()
+        public void GivenMobileNumber_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_MobileNumber()
         {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string mobileNumber = "91 0876543210";
-            //Act
-            bool result = user.ValidateMobileNumber(mobileNumber);
-            //Assert
-            Assert.IsFalse(result);
+            try
+            {
+                //Arrange
+                UserRegistrationValidation user = new UserRegistrationValidation();
+                string mobileNumber = "91 0876543210";
+                //Act
+                bool result = user.ValidateMobileNumber(mobileNumber);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid mobile number.", e.Message);
+            }
         }
         [TestMethod]
-        public void GivenPassword_WhenValidate_ShouldReturnFalse()
+        public void GivenPassword_WhenValidate_Should_Throw_InvalidUserDetailException_Indicating_Invalid_Password()
         {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string password = "snehil@#543";
-            //Act
-            bool result = user.ValidatePassword(password);
-            //Assert
-            Assert.IsFalse(result);
+            try
+            {
+                //Arrange
+                UserRegistrationValidation user = new UserRegistrationValidation();
+                string password = "snehil@#543";
+                //Act
+                bool result = user.ValidatePassword(password);
+            }
+            catch (InvalidUserDetailException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid password.", e.Message);
+            }
         }
         [TestMethod]
         [DataRow("abc@yahoo.com")]
