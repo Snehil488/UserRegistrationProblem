@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistrationProblem
 {
-    class UserRegistrationValidation
+    public class UserRegistrationValidation
     {
         private List<string> sampleMails = new List<string>()
         {

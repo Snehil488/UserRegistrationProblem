@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UserRegistrationProblem
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
