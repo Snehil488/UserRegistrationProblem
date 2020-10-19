@@ -25,72 +25,13 @@ namespace UserRegistrationProblem
             "abc@gmail.com.com",
             "abc+100@gmail.com"
         };
-        public bool ValidateFirstName(string firstName)
-        {
-            if (Regex.IsMatch(firstName, REGEX_FIRSTNAME))
-            {
-                return true;
-            }
-            else
-            {
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_FIRST_NAME, "Invalid first name.");
-            }
-        }
-        public bool ValidateLastName(string lastName)
-        {
-            if (Regex.IsMatch(lastName, REGEX_LASTNAME))
-            {
-                return true;
-            }
-            else
-            {
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_LAST_NAME, "Invalid last name.");
-            }            
-        }
-        public bool ValidateEmail(string email)
-        {
-            if (Regex.IsMatch(email, REGEX_EMAIL))
-            {
-                return true;
-            }
-            else
-            {
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_EMAIL, "Invalid email id.");
-            }
-        }
-        public bool ValidateMobileNumber(string mobNumber)
-        {
-            if (Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER))
-            {
-                return true;
-            }
-            else
-            {
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_MOBILE_NUMBER, "Invalid mobile number.");
-            }
-        }
-        public bool ValidatePassword(string password)
-        {            
-            if (Regex.IsMatch(password, REGEX_PASSWORD))
-            {
-                return true;
-            }
-            else
-            {
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_PASSWORD, "Invalid password.");
-            }
-        }
-        public bool ValidateEmail2(string email)
-        {
-            if(Regex.IsMatch(email, REGEX_EMAIL2))
-            {
-                return true;
-            }
-            else
-            {
-                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_EMAIL, "Invalid email id.");
-            }
-        }
+        public bool ValidateFirstName(string firstName) => (Regex.IsMatch(firstName, REGEX_FIRSTNAME));
+        public bool ValidateLastName(string lastName) => (Regex.IsMatch(lastName, REGEX_LASTNAME));
+        public bool ValidateEmail(string email) => (Regex.IsMatch(email, REGEX_EMAIL));
+        public bool ValidateMobileNumber(string mobNumber) => (Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER));
+        public bool ValidatePassword(string password) => (Regex.IsMatch(password, REGEX_PASSWORD));
+        public bool ValidateEmail2(string email) => (Regex.IsMatch(email, REGEX_EMAIL2));
+
         public void PrintResult(bool result)
         {
             if (result)
