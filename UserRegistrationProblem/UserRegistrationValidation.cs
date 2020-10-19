@@ -31,7 +31,6 @@ namespace UserRegistrationProblem
         public bool ValidateMobileNumber(string mobNumber) => (Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER));
         public bool ValidatePassword(string password) => (Regex.IsMatch(password, REGEX_PASSWORD));
         public bool ValidateEmail2(string email) => (Regex.IsMatch(email, REGEX_EMAIL2));
-
         public void PrintResult(bool result)
         {
             if (result)
